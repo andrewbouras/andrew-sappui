@@ -1,0 +1,70 @@
+Instructions
+
+QBank Editor & Display Instructions
+
+Overview:
+The QBank Editor and Display components allow users to create, edit, delete, and display multiple-choice questions. Questions and answers can be formatted in HTML, and users can upload questions in bulk using a JSON format.
+
+Features:
+
+    Add new questions
+    Edit existing questions
+    Delete questions
+    Upload questions in bulk using JSON
+    Render questions and explanations in HTML
+    Retain selected answers even after deleting questions
+
+Steps to Use:
+
+    Add a New Question:
+        Click on the "Add New Question" button in the editor.
+        Fill in the question, answer choices, and explanation fields.
+
+    Edit a Question:
+        Click on a question from the list.
+        Edit the desired fields and click "Save".
+
+    Delete a Question:
+        Click on the question you wish to delete.
+        Click the "Delete Question" button.
+
+    Upload Questions in Bulk:
+        Prepare a JSON file with the required format (see example JSON file below).
+        Copy the JSON data.
+        Paste the JSON data into the provided text area in the editor.
+        Click "Submit Bulk Questions".
+
+Example JSON Format:
+
+json
+
+{
+  "questions": [
+    {
+      "question": "<p>What is the capital of France?</p>",
+      "answerChoices": [
+        { "value": "<p>Paris</p>", "correct": true },
+        { "value": "<p>London</p>", "correct": false },
+        { "value": "<p>Rome</p>", "correct": false },
+        { "value": "<p>Berlin</p>", "correct": false }
+      ],
+      "explanation": "<p>Paris is the capital city of France.</p>"
+    },
+    {
+      "question": "<p>Which planet is known as the Red Planet?</p>",
+      "answerChoices": [
+        { "value": "<p>Earth</p>", "correct": false },
+        { "value": "<p>Mars</p>", "correct": true },
+        { "value": "<p>Jupiter</p>", "correct": false },
+        { "value": "<p>Saturn</p>", "correct": false }
+      ],
+      "explanation": "<p>Mars is known as the Red Planet due to its reddish appearance.</p>"
+    }
+  ]
+}
+
+Downloadable JSON File
+
+Download Example JSON
+
+Click the link above to download the sample JSON file. You can use this file to upload questions in bulk to the QBank Editor.

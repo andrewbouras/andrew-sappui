@@ -1,0 +1,351 @@
+"use client";
+import { useState } from "react";
+import { Toggle } from "@/components/ui/toggle";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "@/contexts/ThemeContext";
+
+export function New() {
+  const { toggleTheme } = useTheme();
+  const [file, setFile] = useState(null);
+  const [uploading, setUploading] = useState(false);
+  const [uploaded, setUploaded] = useState(false);
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+    setUploading(true);
+    // Simulate file upload process
+    setTimeout(() => {
+      setUploading(false);
+      setUploaded(true);
+    }, 2000); // Simulating a 2-second upload
+  };
+
+  const handleRemoveFile = () => {
+    setFile(null);
+    setUploading(false);
+    setUploaded(false);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center p-6 space-y-6 bg-white border border-gray-200 rounded-lg shadow-md max-w-2xl mx-auto my-8 dark:border-gray-800">
+      <div className="flex items-center justify-between w-full">
+        <h1 className="text-2xl font-semibold text-gray-800">Create New Note</h1>
+        <Toggle aria-label="Toggle dark mode" onClick={toggleTheme}>
+          <SunIcon className="w-6 h-6 text-yellow-500" />
+        </Toggle>
+      </div>
+      <div className="flex flex-col items-center w-full space-y-4">
+        <Input
+          className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring focus:ring-opacity-50 dark:border-gray-800"
+          placeholder="Input your custom prompt"
+          type="text"
+          style={{ color: 'black' }} // Add this line to set the text color to black
+        />
+        <div className="w-full rounded-md shadow-md">
+          <div className="bg-white rounded-t-md">
+            <div className="flex items-center justify-between px-4 py-2 border-b">
+              <div className="flex items-center space-x-2">
+                <BoldIcon className="w-4 h-4 text-gray-500" />
+                <ItalicIcon className="w-4 h-4 text-gray-500" />
+                <UnderlineIcon className="w-4 h-4 text-gray-500" />
+                <StrikethroughIcon className="w-4 h-4 text-gray-500" />
+              </div>
+              <div className="flex items-center space-x-2">
+                <ListIcon className="w-4 h-4 text-gray-500" />
+                <ListIcon className="w-4 h-4 text-gray-500" />
+                <LinkIcon className="w-4 h-4 text-gray-500" />
+              </div>
+            </div>
+          </div>
+          <div className="p-4 border border-gray-200 rounded-b-md dark:border-gray-800">
+            <div className="w-full min-h-[200px] border border-gray-200 rounded-md focus:ring focus:ring-opacity-50 dark:border-gray-800" contentEditable style={{ color: 'black' }}>
+              Type your notes here...
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full h-48 px-4 py-2 border border-gray-200 border-dashed rounded-md cursor-pointer hover:bg-gray-50 dark:border-gray-800">
+          <input
+            className="hidden"
+            type="file"
+            onChange={handleFileChange}
+          />
+          {file ? (
+            <div className="flex items-center space-x-4">
+              <p className="text-sm text-gray-500">{file.name}</p>
+              {uploading ? (
+                <div className="w-8 h-8 rounded-full border-2 border-gray-300 flex items-center justify-center">
+                  <div className="w-4 h-4 rounded-full border-2 border-gray-300 border-t-2 border-t-gray-500 animate-spin" />
+                </div>
+              ) : uploaded ? (
+                <CheckIcon className="w-6 h-6 text-green-500" />
+              ) : null}
+              <Button className="ml-4" variant="secondary" onClick={handleRemoveFile}>
+                <XIcon className="w-4 h-4 text-red-500" />
+              </Button>
+            </div>
+          ) : (
+            <>
+              <CloudUploadIcon className="text-gray-400 w-6 h-6" />
+              <p className="mt-2 text-sm text-gray-500">Drag 'n' drop some files here, or click to select files</p>
+            </>
+          )}
+        </div>
+        <div className="flex items-center justify-between w-full">
+          <Input
+            className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring focus:ring-opacity-50 dark:border-gray-800"
+            placeholder="PDF: Lec 66. Advanced..."
+            readOnly
+            type="text"
+            style={{ color: 'black' }} // Add this line to set the text color to black
+          />
+          <div className="flex items-center space-x-2">
+            <Button className="ml-4" variant="secondary">
+              <UploadIcon className="w-4 h-4" />
+            </Button>
+            <div className="w-8 h-8 rounded-full border-2 border-gray-300 flex items-center justify-center">
+              <CheckIcon className="w-4 h-4 text-green-500" />
+            </div>
+            <div className="w-8 h-8 rounded-full border-2 border-gray-300 flex items-center justify-center">
+              <div className="w-4 h-4 rounded-full border-2 border-gray-300 border-t-2 border-t-gray-500 animate-spin" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <Button className="w-full py-2">Next</Button>
+    </div>
+  );
+}
+
+function BoldIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8" />
+    </svg>
+  );
+}
+
+function CheckIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}
+
+function CloudUploadIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+      <path d="M12 12v9" />
+      <path d="m16 16-4-4-4 4" />
+    </svg>
+  );
+}
+
+function ItalicIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="19" x2="10" y1="4" y2="4" />
+      <line x1="14" x2="5" y1="20" y2="20" />
+      <line x1="15" x2="9" y1="4" y2="20" />
+    </svg>
+  );
+}
+
+function LinkIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+    </svg>
+  );
+}
+
+function ListIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="8" x2="21" y1="6" y2="6" />
+      <line x1="8" x2="21" y1="12" y2="12" />
+      <line x1="8" x2="21" y1="18" y2="18" />
+      <line x1="3" x2="3.01" y1="6" y2="6" />
+      <line x1="3" x2="3.01" y1="12" y2="12" />
+      <line x1="3" x2="3.01" y1="18" y2="18" />
+    </svg>
+  );
+}
+
+function StrikethroughIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M16 4H9a3 3 0 0 0-2.83 4" />
+      <path d="M14 12a4 4 0 0 1 0 8H6" />
+      <line x1="4" x2="20" y1="12" y2="12" />
+    </svg>
+  );
+}
+
+function SunIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2" />
+      <path d="M12 20v2" />
+      <path d="m4.93 4.93 1.41 1.41" />
+      <path d="m17.66 17.66 1.41 1.41" />
+      <path d="M2 12h2" />
+      <path d="M20 12h2" />
+      <path d="m6.34 17.66-1.41 1.41" />
+      <path d="m19.07 4.93-1.41 1.41" />
+    </svg>
+  );
+}
+
+function UnderlineIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M6 4v6a6 6 0 0 0 12 0V4" />
+      <line x1="4" x2="20" y1="20" y2="20" />
+    </svg>
+  );
+}
+
+function UploadIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="17 8 12 3 7 8" />
+      <line x1="12" x2="12" y1="3" y2="15" />
+    </svg>
+  );
+}
+
+function XIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}

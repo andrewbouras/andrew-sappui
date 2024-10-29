@@ -1,0 +1,166 @@
+{
+  "questions": [
+    {
+      "question": "<p>A <strong>35-year-old woman</strong> comes to the clinic with complaints of <strong>burning sensation during urination</strong>, increased urinary frequency, and lower abdominal pain for the past 3 days. She has no significant past medical history and takes no medications. On physical examination, she has a temperature of <strong>100.4\u00b0F</strong>, and suprapubic tenderness is noted. Urinalysis reveals the presence of leukocytes, nitrites, and bacteria. Which of the following organisms is most likely responsible for her symptoms?</p>",
+      "answerChoices": [
+        {
+          "value": "<p><strong>Escherichia coli</strong></p>",
+          "correct": true
+        },
+        {
+          "value": "<p><strong>Enterococcus faecalis</strong></p>",
+          "correct": false
+        },
+        {
+          "value": "<p><strong>Klebsiella pneumoniae</strong></p>",
+          "correct": false
+        },
+        {
+          "value": "<p><strong>Proteus mirabilis</strong></p>",
+          "correct": false
+        },
+        {
+          "value": "<p><strong>Staphylococcus saprophyticus</strong></p>",
+          "correct": false
+        }
+      ],
+      "explanation": "<p>This patient's symptoms of burning sensation during urination, increased urinary frequency, lower abdominal pain, and suprapubic tenderness, along with her urinalysis findings of leukocytes, nitrites, and bacteria, are indicative of a urinary tract infection (UTI). <strong>Escherichia coli</strong> is the most common causative organism of UTIs, accounting for approximately 80-90% of cases.</p>"
+    },
+    {
+      "question": "<p>A <strong>35-year-old man</strong> presents to the clinic with complaints of <strong>dysuria</strong>, <strong>urinary frequency</strong>, and <strong>suprapubic pain</strong> for the past 3 days. He has no fever, chills, or flank pain. He reports a history of <strong>insertive anal intercourse</strong>. A urinalysis shows <strong>pyuria</strong> and a urine culture reveals <strong>Escherichia coli</strong> with \u2265 10\u00b3 colony forming units/ml. He is started on <strong>nitrofurantoin</strong> (100mg twice daily). After 72 hours of antibiotic treatment, his symptoms persist. What is the next best step in the management of this patient?</p>",
+      "answerChoices": [
+        {
+          "value": "<p>Continue current antibiotic therapy for an additional 3 days</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Discontinue antibiotic therapy and observe</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Perform a urine culture and susceptibility testing</p>",
+          "correct": true
+        },
+        {
+          "value": "<p>Start ciprofloxacin or levofloxacin</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Repeat urinalysis and wait for results</p>",
+          "correct": false
+        }
+      ],
+      "explanation": "<p>In this clinical scenario, the patient has persistent symptoms of cystitis after 72 hours of appropriate antibiotic therapy with nitrofurantoin. According to the guidelines, if symptoms persist after 48-72 hours of antimicrobial use, a urine culture and susceptibility testing should be performed to identify any potential resistant organisms and guide further treatment.</p>"
+    },
+    {
+      "question": "<p>A <strong>75-year-old woman</strong> with a history of <strong>diabetes mellitus</strong> and chronic <strong>urinary tract infections</strong> presents to the emergency department with <strong>abdominal pain</strong>, fever, and chills. On examination, she has a temperature of 101.5\u00b0F (38.6\u00b0C), blood pressure of 90/60 mm Hg, and a heart rate of 110/min. Abdominal imaging reveals gas formation in the renal pelvis. Which of the following is the most appropriate initial management step for this patient?</p>",
+      "answerChoices": [
+        {
+          "value": "<p>Administer insulin and monitor blood glucose</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Begin appropriate antimicrobial therapy and replace catheter</p>",
+          "correct": true
+        },
+        {
+          "value": "<p>Perform immediate surgical intervention</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Provide intravenous hydration and monitor vital signs</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Start prophylactic antibiotics for future infections</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Administer insulin and monitor blood glucose - While important for managing diabetes, this is not the immediate priority in the context of a severe infection.</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Perform immediate surgical intervention - Surgical intervention may be required if the condition does not improve with medical management, but it is not the first step.</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Provide intravenous hydration and monitor vital signs - This is supportive care but does not address the underlying infection directly.</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Start prophylactic antibiotics for future infections - Prophylactic antibiotics are not appropriate for acute management; they are used to prevent future infections.</p>",
+          "correct": false
+        }
+      ],
+      "explanation": "<p>This patient presents with a classic case of <strong>emphysematous pyelonephritis</strong>, a severe gas-producing, necrotizing infection of the renal parenchyma. It is most commonly caused by <strong>E. coli</strong> and <strong>Klebsiella pneumoniae</strong> and is associated with risk factors such as <strong>diabetes mellitus</strong>. The most appropriate initial management involves beginning appropriate antimicrobial therapy and replacing any indwelling catheters, as this will help reduce the bacterial load and prevent further infection.</p>"
+    },
+    {
+      "question": "<p>A <strong>35-year-old woman</strong> comes to the emergency department with a <strong>high fever</strong>, <strong>shaking chills</strong>, and <strong>flank pain</strong> that started abruptly 12 hours ago. She also reports <strong>nausea</strong> and <strong>vomiting</strong>. She has a history of <strong>recurrent urinary tract infections</strong> but has not had symptoms in the past six months. On physical examination, she has a temperature of <strong>38.5\u00b0C (101.3\u00b0F)</strong>, a heart rate of <strong>110/min</strong>, and marked tenderness over the costovertebral angle. Urinalysis reveals the presence of white cell casts. Which of the following is the most likely diagnosis?</p>",
+      "answerChoices": [
+        {
+          "value": "<p>Acute cystitis</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Acute glomerulonephritis</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Interstitial nephritis</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Nephrolithiasis</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Pyelonephritis</p>",
+          "correct": true
+        },
+        {
+          "value": "<p><strong>Acute cystitis</strong> typically presents with lower urinary tract symptoms such as dysuria, urinary frequency, and urgency, without systemic symptoms like fever or flank pain.</p>",
+          "correct": false
+        },
+        {
+          "value": "<p><strong>Acute glomerulonephritis</strong> generally presents with hematuria, proteinuria, and often hypertension, but not with the acute systemic symptoms seen in this patient.</p>",
+          "correct": false
+        },
+        {
+          "value": "<p><strong>Interstitial nephritis</strong> can present with fever and flank pain, but it usually has a more subacute onset and is often associated with the use of certain medications or infections.</p>",
+          "correct": false
+        },
+        {
+          "value": "<p><strong>Nephrolithiasis</strong> or kidney stones can cause flank pain and hematuria, but it does not usually cause systemic symptoms like fever and chills unless there is a secondary infection.</p>",
+          "correct": false
+        }
+      ],
+      "explanation": "<p>This patient's presentation of <strong>high fever</strong>, <strong>shaking chills</strong>, <strong>flank pain</strong>, and <strong>nausea/vomiting</strong> strongly suggests a diagnosis of <strong>pyelonephritis</strong>. The presence of <strong>white cell casts</strong> in the urinalysis further supports this diagnosis, as these casts are indicative of upper urinary tract infection, specifically involving the kidneys. In contrast:</p>"
+    },
+    {
+      "question": "<p>A <strong>62-year-old woman</strong> presents to the emergency department with a three-day history of <strong>fever</strong>, <strong>chills</strong>, and <strong>severe left flank pain</strong>. She has a history of <strong>type 2 diabetes mellitus</strong> and has been on insulin therapy for the past five years. She reports <strong>nausea</strong> and <strong>vomiting</strong> but denies any recent urinary symptoms. On examination, her temperature is <strong>101.5\u00b0F (38.6\u00b0C)</strong>, blood pressure is <strong>100/60 mm Hg</strong>, and heart rate is <strong>110/min</strong>. She has <strong>left costovertebral angle tenderness</strong>. Laboratory results show a white blood cell count of <strong>15,000/mm\u00b3</strong> with a predominance of neutrophils. Urine culture is pending. Which of the following is the most likely diagnosis?</p>",
+      "answerChoices": [
+        {
+          "value": "<p>Acute cystitis</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Emphysematous pyelonephritis</p>",
+          "correct": true
+        },
+        {
+          "value": "<p>Pelvic inflammatory disease</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Prostatitis</p>",
+          "correct": false
+        },
+        {
+          "value": "<p>Renal papillary necrosis</p>",
+          "correct": false
+        }
+      ],
+      "explanation": "<p>This patient\u2019s presentation of fever, chills, severe flank pain, and costovertebral angle tenderness, along with her history of diabetes mellitus, suggests a diagnosis of <strong>emphysematous pyelonephritis</strong>. Diabetes mellitus is a significant risk factor for this severe form of pyelonephritis, which is characterized by the presence of gas-forming organisms leading to necrosis and gas production in the renal parenchyma and surrounding tissues.</p>"
+    }
+  ]
+}

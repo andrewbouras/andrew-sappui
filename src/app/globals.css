@@ -1,0 +1,99 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+html, body, #__next {
+  height: 100%;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+body {
+  background-color: #f9fafb; /* Light mode background */
+  color: #111827; /* Light mode text color */
+}
+
+.dark body {
+  background-color: #1f2937; /* Dark mode background */
+  color: #f9fafb; /* Dark mode text color */
+}
+
+.animate-slowSmoothGradient {
+  background-size: 300% 100%;
+  transition: background-size 0.3s; /* Smooth transition for animations */
+}
+
+.dialog-content {
+  background-color: white; /* For light mode */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Add shadow for better visibility */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for dialog */
+}
+.dark .dialog-content {
+  background-color: #1f2937; /* For dark mode */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.08); /* Add shadow for better visibility in dark mode */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+
+/* Add these styles at the end of the file */
+.sidebar-transition {
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar-open {
+  width: 16rem;
+}
+
+.sidebar-closed {
+  width: 4rem;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main-content-transition {
+  transition: margin-left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.main-content-sidebar-open {
+  margin-left: 16rem;
+}
+
+.main-content-sidebar-closed {
+  margin-left: 4rem;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-size: 1000px 100%;
+}
